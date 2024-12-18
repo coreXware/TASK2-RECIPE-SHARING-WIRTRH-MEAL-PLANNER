@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Meal Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Weekly Meal Planner</h1>
+        <p>Plan your meals and access delicious recipes for every day of the week!</p>
+    </header>
+
+    <section class="meal-planner">
+        <!-- Monday -->
+        <div class="day-card">
+            <h2>Monday</h2>
+            <div class="img-box">
+                <img src="ph.jpg" alt="Monday Meal">
+            </div>
+            <p><strong>Breakfast:</strong> Poha</p>
+            <p><strong>Lunch:</strong> Chole with Rice</p>
+            <p><strong>Dinner:</strong> Aloo Gobi with Chapati</p>
+            <button onclick="openRecipeModal('Monday', 'Poha', 'Chole with Rice', 'Aloo Gobi with Chapati')">View Recipe</button>
+        </div>
+
+        <!-- Tuesday -->
+        <div class="day-card">
+            <h2>Tuesday</h2>
+            <div class="img-box">
+                <img src="up.jpg" alt="Tuesday Meal">
+            </div>
+            <p><strong>Breakfast:</strong> Upma</p>
+            <p><strong>Lunch:</strong> Matar Paneer with Rice</p>
+            <p><strong>Dinner:</strong> Dhokla with Chutney</p>
+            <button onclick="openRecipeModal('Tuesday', 'Upma', 'Matar Paneer with Rice', 'Dhokla with Chutney')">View Recipe</button>
+        </div>
+
+        <!-- Wednesday -->
+        <div class="day-card">
+            <h2>Wednesday</h2>
+            <div class="img-box">
+                <img src="py.jpg" alt="Wednesday Meal">
+            </div>
+            <p><strong>Breakfast:</strong> Paratha with Yogurt</p>
+            <p><strong>Lunch:</strong> Baingan Bharta with Chapati</p>
+            <p><strong>Dinner:</strong> Dal Tadka with Rice</p>
+            <button onclick="openRecipeModal('Wednesday', 'Paratha with Yogurt', 'Baingan Bharta with Chapati', 'Dal Tadka with Rice')">View Recipe</button>
+        </div>
+
+        <!-- Thursday -->
+        <div class="day-card">
+            <h2>Thursday</h2>
+            <div class="img-box">
+                <img src="cb.jpg" alt="Thursday Meal">
+            </div>
+            <p><strong>Breakfast:</strong> Masala Dosa</p>
+            <p><strong>Lunch:</strong> Vegetable Biryani</p>
+            <p><strong>Dinner:</strong> Cabbage Sabzi with Chapati</p>
+            <button onclick="openRecipeModal('Thursday', 'Masala Dosa', 'Vegetable Biryani', 'Cabbage Sabzi with Chapati')">View Recipe</button>
+        </div>
+
+        <!-- Friday -->
+        <div class="day-card">
+            <h2>Friday</h2>
+            <div class="img-box">
+                <img src="ph.jpg" alt="Friday Meal">
+            </div>
+            <p><strong>Breakfast:</strong> Poha</p>
+            <p><strong>Lunch:</strong> Chole with Rice</p>
+            <p><strong>Dinner:</strong> Aloo Gobi with Chapati</p>
+            <button onclick="openRecipeModal('Friday', 'Poha', 'Chole with Rice', 'Aloo Gobi with Chapati')">View Recipe</button>
+        </div>
+
+        <!-- Saturday -->
+        <div class="day-card">
+            <h2>Saturday</h2>
+            <div class="img-box">
+                <img src="up.jpg" alt="Saturday Meal">
+            </div>
+            <p><strong>Breakfast:</strong> Upma</p>
+            <p><strong>Lunch:</strong> Matar Paneer with Rice</p>
+            <p><strong>Dinner:</strong> Dhokla with Chutney</p>
+            <button onclick="openRecipeModal('Saturday', 'Upma', 'Matar Paneer with Rice', 'Dhokla with Chutney')">View Recipe</button>
+        </div>
+
+        <!-- Sunday -->
+        <div class="day-card">
+            <h2>Sunday</h2>
+            <div class="img-box">
+                <img src="py.jpg" alt="Sunday Meal">
+            </div>
+            <p><strong>Breakfast:</strong> Paratha with Yogurt</p>
+            <p><strong>Lunch:</strong> Baingan Bharta with Chapati</p>
+            <p><strong>Dinner:</strong> Dal Tadka with Rice</p>
+            <button onclick="openRecipeModal('Sunday', 'Paratha with Yogurt', 'Baingan Bharta with Chapati', 'Dal Tadka with Rice')">View Recipe</button>
+        </div>
+    </section>
+
+    <!-- Recipe Modal -->
+    <div id="recipeModal" class="modal">
+        <div class="modal-box">
+            <span class="close-btn" onclick="closeRecipeModal()">&times;</span>
+            <h2 id="modal-day"></h2>
+            <div class="modal-content">
+                <p><strong>Breakfast:</strong> <span id="modal-breakfast"></span></p>
+                <p><strong>Lunch:</strong> <span id="modal-lunch"></span></p>
+                <p><strong>Dinner:</strong> <span id="modal-dinner"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    text-align: center;
+    background-color:#61855dc8;
+    color: white;
+    padding: 20px;
+}
+
+h1, p {
+    margin-bottom: 10px;
+}
+
+/* Meal Planner Cards */
+.meal-planner {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.day-card {
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    border-radius: 8px;
+    text-align: center;
+    padding: 15px;
+}
+
+.img-box img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #61855d;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #31452f;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-box {
+    background-color: white;
+    border-radius: 10px;
+    width: 400px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.modal-box h2 {
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    margin: 10px 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: red;
+}
+    </style>
+
+    <script>
+        // Open the recipe modal with details
+        function openRecipeModal(day, breakfast, lunch, dinner) {
+            document.getElementById("modal-day").innerText = `${day} - Recipes`;
+            document.getElementById("modal-breakfast").innerText = breakfast;
+            document.getElementById("modal-lunch").innerText = lunch;
+            document.getElementById("modal-dinner").innerText = dinner;
+        
+            document.getElementById("recipeModal").style.display = "flex";
+        }
+        
+        // Close the modal
+        function closeRecipeModal() {
+            document.getElementById("recipeModal").style.display = "none";
+        }
+        
+        // Close modal if clicking outside of box
+        window.onclick = function(event) {
+            const modal = document.getElementById("recipeModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>

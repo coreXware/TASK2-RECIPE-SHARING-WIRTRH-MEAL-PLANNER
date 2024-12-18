@@ -1,0 +1,349 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #1e1e1e;
+    color: #fff;
+    overflow-x: hidden;
+    background-image: url(b2.jpg);
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 1.5rem 2rem;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    color: #f8d7a3;
+    font-family: 'Playfair   Display', serif;
+  }
+  
+  .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .navbar-links a {
+    color: #f8d7a3;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-links a:hover {
+    color: #f2a154;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: url('b1.jpg') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 10;
+  }
+  
+  .sub-heading {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    color: #f2a154;
+  }
+  
+  .main-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: transparent;
+    border: 2px solid #f8d7a3;
+    color: #f8d7a3;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #f8d7a3;
+    color: #1e1e1e;
+  }
+ 
+  
+  /* Section Styles */
+  .section {
+    padding: 3rem 2rem;
+    text-align: center;
+    
+  }
+  
+  .section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .section p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  /* Overall Section Styling */
+#about-us {
+  background: url('your-background-image.jpg') center/cover no-repeat;
+  padding: 50px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+/* Container */
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.6); /* Transparent dark overlay */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px); /* Glassmorphism effect */
+}
+
+/* Title Styling */
+.about-container h2 {
+  font-size: 2.5rem;
+  font-family: 'Poppins', sans-serif; /* Google Font */
+  margin-bottom: 20px;
+  color: #ffcc00; /* Highlighted title color */
+}
+
+/* Image and Text Layout */
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.about-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* Circular Image */
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-img:hover {
+  transform: scale(1.1); /* Image Zoom Effect */
+}
+
+.about-text {
+  flex: 1;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+  .product-categories {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    background-color: #4b4e4e7c;;
+  }
+  
+  .category {
+    background: rgba(0, 0, 0, 0.6); /* Transparent dark overlay */
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .category img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .category h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #222;
+  }
+  
+  footer p {
+    font-size: 1rem;
+  }
+  .product-categories {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    background-color: #4b4e4e7c; /* Existing style */
+  }
+  
+  .category {
+    background-color: #63989cbb; /* Existing style */
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 250px;
+  }
+  
+  .category img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Existing style */
+  }
+  
+  .category h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem; /* Existing style */
+  }
+  
+  .category p {
+    font-size: 1rem; /* New addition for description text */
+    margin-top: 0.5rem;
+  }
+/* Style for the Explore More Recipes Button */
+.recipe-link {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btn-more-recipes {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #f8d7a3;
+  color: #1e1e1e;
+  font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-more-recipes:hover {
+  background-color: #f2a154;
+  color: #fff;
+}
+
+.btn-more-recipes:focus {
+  outline: none;
+  border: 2px solid #1e1e1e;
+}
+  
+  /* Forms */
+  .container {
+    background-color: #000;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    margin-left: 30%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.629);
+}
+
+.container h1 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.container p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+input:focus, textarea:focus {
+    outline: 2px solid #007BFF;
+}
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  button:hover {
+    background-color: #444;
+  }
+  
+  
